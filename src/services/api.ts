@@ -1,15 +1,16 @@
 import axios from "axios";
 
+//---------------------------------- Cat API --------------------------------//
 export const catApi = axios.create({
     baseURL: "https://cataas.com",
     timeout: 10000,
 });
 
 export const getCatImage = (): string => {
-    //retorna imagem de gatinho
     return `https://cataas.com/cat?timestamp=${Date.now()}`;
 };
 
+//---------------------------------- Cagent API --------------------------------//
 export const cagentApi = axios.create({
     baseURL: "https://api.apicagent.com",
     timeout: 10000,
@@ -52,6 +53,38 @@ export const getBrowserInfo = async (): Promise<BrowserInfo> => {
         };
     } catch (error) {
         console.error("Erro ao buscar informações do navegador:", error);
+        throw error;
+    }
+};
+
+export interface ChuckJoke {
+    id: string;
+    value: string;
+    icon_url?: string;
+}
+
+export const getChuckJoke = async (): Promise<ChuckJoke> => {
+    try {
+        const response = await axios.get("https://api.chucknorris.io/jokes/random");
+        return response.data as ChuckJoke;
+    } catch (error) {
+        console.error("Erro ao buscar piada do Chuck Norris:", error);
+        throw error;
+    }
+};
+
+//---------------------------------- Chuck Norris API --------------------------------//
+export const chuckNorrisApi = axios.create({
+    baseURL: "https://api.chucknorris.io/jokes/random",
+    timeout: 10000,
+});
+
+export const getChuckNorrisJoke = async (): Promise<string> => {
+    try {
+        const response = await chuckNorrisApi.get("");
+        return response.data.value;
+    } catch (error) {
+        console.error("Erro ao buscar piada do Chuck Norris:", error);
         throw error;
     }
 };
