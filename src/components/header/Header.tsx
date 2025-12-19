@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { getCatImage } from "../../services/api";
 
 const Header: React.FC = () => {
@@ -13,13 +14,23 @@ const Header: React.FC = () => {
     }, []);
 
     return (
-        <div className="header">
-            {catImage ? (
-                <img src={catImage} alt="Gatinho fofo" style={{ maxWidth: "200px", borderRadius: "8px" }} />
-            ) : (
-                <p>Carregando gatinho...</p>
-            )}
-        </div>
+        <header className="header">
+            <div className="header-inner">
+                <Link to="/" className="logo">
+                    {catImage ? (
+                        <img src={catImage} alt="Gatinho fofo" style={{ maxWidth: "72px", borderRadius: "8px" }} />
+                    ) : (
+                        <span>Gatinho</span>
+                    )}
+                </Link>
+
+                <nav className="nav-links">
+                    <Link to="/">Home</Link>
+                    <Link to="/chuck-norris">Chuck Norris</Link>
+                    <Link to="/sobre">Sobre</Link>
+                </nav>
+            </div>
+        </header>
     );
 };
 

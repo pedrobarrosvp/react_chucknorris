@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Header from "../components/header/Header";
-import { getBrowserInfo } from "../services/api";
-import type { BrowserInfo } from "../services/api";
+import Header from "../../components/header/Header";
+import { getBrowserInfo } from "../../services/api";
+import type { BrowserInfo } from "../../services/api";
 import "./Home.css";
 
 const MainHome: React.FC = () => {

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getChuckJoke } from "../services/api";
-import type { ChuckJoke } from "../services/api";
+import { getChuckJoke } from "../../services/api";
+import type { ChuckJoke } from "../../services/api";
 import "./ChuckNorris.css";
+import Header from "../../components/header/Header";
 
 const MainChuckNorris: React.FC = () => {
     const [joke, setJoke] = useState<ChuckJoke | null>(null);
@@ -49,6 +50,7 @@ const MainChuckNorris: React.FC = () => {
 const ChuckNorris: React.FC = () => {
     return (
         <div>
+            <Header/>
             <MainChuckNorris />
         </div>
     );
