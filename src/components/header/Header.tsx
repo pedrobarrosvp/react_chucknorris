@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getCatImage } from "../../services/api";
+import "./Header.css";
 
 const Header: React.FC = () => {
     const [catImage, setCatImage] = useState<string>("");

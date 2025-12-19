@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+/* Container Principal com efeito aquarela */
+.header {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  /* Gradiente suave simulando o fundo aquarela da imagem (Azul -> Verde -> Amarelo suave) */
+  background: linear-gradient(120deg, #d4fcff 0%, #e8f5e9 50%, #fffde7 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Separa logo dos links */
+  gap: 20px;
+}
+
+/* Estilo da Logo / Foto do Gato */
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Forçamos a imagem a ser redonda e ter a borda grossa */
+.logo img {
+  width: 90px !important;       /* Substitui o inline style */
+  height: 90px !important;      /* Garante que seja um quadrado perfeito antes de arredondar */
+  max-width: none !important;
+  border-radius: 50% !important; /* Faz ficar redonda */
+  object-fit: cover;            /* Evita que a foto do gato fique esticada */
+  border: 5px solid #7aaec2;    /* A borda azulada da imagem */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background-color: white;
+}
+
+.logo img:hover {
+  transform: scale(1.05) rotate(-5deg);
+}
+
+.logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* Navegação */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Estilo base dos Botões (Pills) */
+.nav-links a {
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 50px; /* Borda arredondada estilo pílula */
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Efeito de Hover Geral */
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  opacity: 0.9;
+}
+
+/* Cores Específicas para cada botão igual à imagem */
+
+/* 1º Link (Home) - Azul Petróleo */
+.nav-links a:nth-child(1) {
+  background-color: #709fb0;
+}
+
+/* 2º Link (Chuck Norris) - Laranja/Terracota */
+.nav-links a:nth-child(2) {
+  background-color: #e08e55;
+}
+
+/* 3º Link (Sobre) - Verde Sage */
+.nav-links a:nth-child(3) {
+  background-color: #8fb58e;
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
