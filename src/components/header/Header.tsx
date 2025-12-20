@@ -17,14 +17,17 @@ const Header: React.FC = () => {
     return (
         <header className="header">
             <div className="header-inner">
-                <Link to="/" className="logo">
-                    {catImage ? (
-                        <img src={catImage} alt="Gatinho fofo" style={{ maxWidth: "72px", borderRadius: "8px" }} />
-                    ) : (
-                        <span>Gatinho</span>
-                    )}
-                </Link>
-
+                <div className="gato">
+                    <Link to="/" className="logo">
+                    <div className="cat-wrapper">
+                        {catImage ? (
+                            <img src={catImage} alt="Gatinho fofo" />
+                        ) : (
+                            <span>Gatinho</span>
+                        )}
+                    </div>
+                    </Link>
+                </div>
                 <nav className="nav-links">
                     <Link to="/">Home</Link>
                     <Link to="/chuck-norris">Chuck Norris</Link>

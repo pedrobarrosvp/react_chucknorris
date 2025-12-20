@@ -1,0 +1,80 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container principal */
+.main-home {
+    min-height: 100vh;          /* ocupa a tela inteira */
+    margin-top: 90px;           /* empurra abaixo do header fixo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e9eef5, #d6e2f0);
+}
+
+/* Mensagens */
+.main-home p {
+    font-size: 1.1rem;
+    color: #4b5563;
+}
+
+.error {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+/* Wrapper */
+.browser-info {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* Título */
+.browser-info h2 {
+    margin-bottom: 16px;
+    color: #1e3a8a;
+    font-size: 1.5rem;
+}
+
+/* Card */
+.info-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e5e7eb;
+    text-align: left;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Texto */
+.info-card p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #374151;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-card strong {
+    color: #2563eb;
+}
+
+.info-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
