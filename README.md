@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+O repositório pedrobarrosvp/react_chucknorris é um projeto de estudo desenvolvido em React que consome a API pública do Chuck Norris (Chuck Norris API). O objetivo principal da aplicação é exibir fatos curiosos e "verdades" engraçadas sobre o lendário Chuck Norris, permitindo que o usuário visualize frases aleatórias ou filtre por categorias.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aqui estão os detalhes técnicos e as instruções para execução:
 
-Currently, two official plugins are available:
+1. Descrição do Projeto
+A aplicação funciona como um buscador de frases. Ela se conecta ao endpoint da API para buscar dados em formato JSON e renderiza essas informações em uma interface moderna e responsiva. É um exemplo clássico de projeto para praticar o consumo de APIs REST, manipulação de estados e hooks no React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Tecnologias Utilizadas
+Com base na estrutura comum desse repositório, as tecnologias envolvidas são:
 
-## React Compiler
+React.js: Biblioteca principal para construção da interface.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+JavaScript (ES6+): Linguagem de programação.
 
-## Expanding the ESLint configuration
+Styled Components (ou CSS comum): Para a estilização dos componentes.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Axios ou Fetch API: Para realizar as requisições HTTP para a API do Chuck Norris.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+React Hooks (como useState e useEffect): Para gerenciar o ciclo de vida e os dados da aplicação.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. Instruções para Rodar Localmente
+Para rodar o projeto na sua máquina, siga estes passos:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Pré-requisitos:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Ter o Node.js instalado (recomenda-se a versão LTS).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Ter o Git instalado.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Passo a passo:
+
+Clonar o repositório: Abra o seu terminal e digite:
+
+Bash
+
+git clone https://github.com/pedrobarrosvp/react_chucknorris.git
+Acessar a pasta do projeto:
+
+Bash
+
+cd react_chucknorris
+Instalar as dependências: Use o gerenciador de pacotes (NPM ou Yarn) para baixar as bibliotecas necessárias:
+
+Bash
+
+npm install
+# ou, se preferir usar o yarn:
+yarn
+Iniciar a aplicação: Após a instalação, execute o comando para rodar o servidor de desenvolvimento:
+
+Bash
+
+npm start
+# ou
+yarn start
+Acessar no navegador: A aplicação abrirá automaticamente ou poderá ser acessada no endereço: http://localhost:3000.
+
+Principais Funcionalidades (esperadas)
+Busca Aleatória: Um botão que traz uma frase nova a cada clique.
+
+Categorias: Uma lista ou dropdown para filtrar as frases por temas (ex: dev, food, movie, etc.).
+
+Campo de Busca: Pesquisa por palavras-chave específicas dentro da base de piadas.
+
+
+<img width="1917" height="984" alt="Captura de tela 2025-12-19 230638" src="https://github.com/user-attachments/assets/0f0d4d97-a881-4640-bbcc-4bc0c41b3249" />
+
+
+<img width="1901" height="988" alt="Captura de tela 2025-12-19 230605" src="https://github.com/user-attachments/assets/8b480f31-31a6-4767-b0ff-b2db9ce63163" />
+
+
+<img width="1916" height="991" alt="Captura de tela 2025-12-19 230717" src="https://github.com/user-attachments/assets/2b44f22b-b0b7-40e8-b591-1fcddc1a903d" />
+
